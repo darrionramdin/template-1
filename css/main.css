@@ -231,6 +231,27 @@ h1, h2, h3, h4, h5 {
   padding-top: 20rem;
 }
 
+.about-image {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding-top: 25rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #about {
+    padding-top: 40rem;
+  }
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
 /*=================================================================
   11. Video CTA
 ===================================================================*/
@@ -281,6 +302,7 @@ h1, h2, h3, h4, h5 {
   border: 1px solid rgba(0,0,0, 0.1);
   padding: 30px 10px;
   transition: border 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .service:hover {
@@ -349,6 +371,9 @@ h1, h2, h3, h4, h5 {
   height: 300px;
   display: block;
   background: #95a5a6;
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-item:hover {
@@ -383,4 +408,45 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
+}
+
+/*=================================================================
+  15. Testimonial
+===================================================================*/
+
+.testimonial {
+  height: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(0,0,0, 0.1);
+
+}
+
+#testimonial-carousel .carousel-indicators {
+  bottom: -50px;
+}
+
+#testimonial-carousel .carousel-indicators li {
+  background: #95a5a6;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+#testimonial-carousel .carousel-indicators li.active {
+  background: #2ecc71;
+}
+
+.testimonial-image {
+  margin: 20px 0;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
 }

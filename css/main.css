@@ -105,6 +105,7 @@ h1, h2, h3, h4, h5 {
 .btn-primary {
   background: #2ecc71;
   border-color: #2ecc71;
+  box-shadow: none;
 }
 
 .btn-primary:hover {
@@ -449,4 +450,74 @@ h1, h2, h3, h4, h5 {
   background-size: cover;
   background-position: center;
   border-radius: 100%;
+}
+
+/*=================================================================
+  16. CTA
+===================================================================*/
+
+.cta {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*=================================================================
+  17. Team
+===================================================================*/
+
+.team-card {
+  height: 520px;
+  border: 1px solid rgba(0,0,0, 0.1);
+  padding: 20px 20px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 30px;
+}
+
+.team-card:hover {
+  border: 1px solid rgba(0,0,0, 0.3);
+}
+
+.team-card-img {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.team-card-body {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.team-card-position {
+  text-transform: uppercase;
+  color: #2ecc71;
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.team-card-name {
+  padding-top: 5px;
+}
+
+.team-card-text {
+  padding-top: 14px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.team-card-socials a {
+  font-size: 14px;
+  margin-right: 12px;
+  color: #95a5a6;
+  transition: color 0.3s ease-in-out;
+}
+
+.team-card-socials a:hover {
+  color: #2ecc71;
+}
+
+.team-card-socials a:last-child {
+  margin-right: 0;
 }

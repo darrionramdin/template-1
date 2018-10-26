@@ -31,10 +31,16 @@ $(function() {
     lightbox();
 
     // Portfolio Filter
-
+    portfolioFilter()
 
     // Portfolio Filter Active
     portfolioFilters();
+
+    // TypedJS
+    typed();
+
+    // Particles
+    particles();
 });
 
 // Main Functions
@@ -84,4 +90,24 @@ function portfolioFilters() {
 // Change Navbar background
 function navBackground() {
   $('.navbar').toggleClass('navbar-scrolled', $(this).scrollTop() > $('.navbar').height());
+}
+
+// Typed JS
+function typed() {
+  if($('.typed').length) {
+    const typedTexts = $('.typed').data('texts').split(',');
+    const typed = new Typed('.typed',{
+      strings: typedTexts,
+      typeSpeed: 50,
+      backSpeed: 20,
+      loop: true
+    })
+  }
+}
+
+// Particles JS
+function particles() {
+  if($('.particles').length) {
+    particlesJS.load('particles-js', '/js/particles.json');
+  }
 }

@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Template</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#mainNav" data-offset="60">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <!-- Place Your Logo Inside the a tag below -->
-        <a href="#" class="navbar-brand">Brand</a>
-        <div class="navbar-collapse collapse">
+        <a href="#" class="navbar-brand">
+          <img src="img/logo-white.png" alt="Arrowhead" width="30" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNavContent" class="navbar-collapse collapse">
           <!-- Navbar Links -->
           <ul class="navbar-nav ml-auto">
             <!--
@@ -29,19 +34,28 @@
                 e.g <a href="http//google.com" class="nav-link">Google</a>
              -->
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a href="#about" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
+              <a href="#services" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Portfolio</a>
+              <a href="#portfolio" class="nav-link">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Testimonials</a>
+              <a href="#testimonials" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a href="#team" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#blog" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -49,7 +63,7 @@
     </nav>
 
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
+    <div id="home" class="jumbotron jumbotron-fluid">
       <div class="overlay" data-overlay="#2c3e50, 0.7"></div>
       <div class="h-100 container">
         <div class="jumbotron-content h-100 d-flex flex-column justify-content-center align-items-center rellax" data-rellax-speed="-5">
@@ -137,7 +151,7 @@
         </div>
       </div>
     </div>
-<!-- data-overlay="#000b29, 0.6" -->
+
     <!-- About Us Section -->
     <section class="section bg-light" id="about">
       <div class="container">
@@ -967,6 +981,7 @@
                       <textarea class="form-control" rows="6"></textarea>
                     </div>
                   </div>
+                  <button type="submit" class="btn btn-primary btn-outline">Submit</button>
                 </form>
               </div>
             </div>
@@ -991,8 +1006,39 @@
       </div>
     </section>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- Footer text -->
+            <small class="text-white-50">New York City's Leading Digital Agency</small>
+          </div>
+          <div class="col-lg-4">
+            <!-- Footer Logo - Text/Image -->
+            <div class="text-center">
+              <a href="#home" class="navbar-brand">
+                <img src="img/logo-white.png" alt="Arrowhead" width="30" height="30">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <!-- Footer Social Links -->
+            <div class="navbar-socials text-lg-right">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Rellax JS -->

@@ -1,13 +1,36 @@
+/*------------------------------------------------------------------
+Table of contents
+
+1. Imports
+2. Typography
+3. Base Styles
+4. Utility
+5. Jumbotron
+6. Button
+7. Navbar
+8. Services Block
+9. Sections
+10. About Section
+11. Video CTA
+12. Service
+13. Portfolio Filters
+14. Portfolio Items
+15. Testimonial
+16. CTA
+17. Team
+18. Blog Card
+19. Form
+20. Footer
+21. Portfolio Item Slider
+22. Particles
+-------------------------------------------------------------------*/
+
 
 /*=================================================================
   1. Imports
 ===================================================================*/
 
-@import "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css";
-
-:root {
-
-}
+@import "./jquery.fancybox.min.css";
 
 /*=================================================================
   2. Typography
@@ -90,7 +113,6 @@ a:hover {
   position: relative;
   height: 100vh;
   margin: 0;
-  background-image: url('/img/jumbotron.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -199,7 +221,8 @@ a:hover {
 
 .navbar-scrolled {
   background: black;
-  padding: 18px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -220,8 +243,21 @@ a:hover {
   box-shadow: 0px 5px 40px rgba(0,0,0,0.2);
 }
 
+@media(max-width: 998px) {
+  .services-block  {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 756px) {
+  .services-block  {
+    margin-top: 80px;
+  }
+}
+
+
 .services-block-service {
-  height: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,27 +316,31 @@ a:hover {
   background-position: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   #about {
-    padding-top: 25rem;
+    padding-top: 24rem;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 757px) {
   #about {
-    padding-top: 40rem;
-  }
-  .about-image {
-    margin-top: 20px;
+    padding-top: 35rem;
   }
 }
+
+@media (max-width: 556px) {
+  #about {
+    padding-top: 50rem;
+  }
+}
+
 
 /*=================================================================
   11. Video CTA
 ===================================================================*/
 
 .video-cta {
-  min-height: 50vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -378,7 +418,7 @@ a:hover {
 ===================================================================*/
 
 .portfolio-filters {
-  margin: 40px 0;
+  margin: 25px 0 40px 0;
   text-align: center;
 }
 
@@ -386,6 +426,7 @@ a:hover {
   background: transparent;
   border: 0;
   margin-right: 40px;
+  margin-bottom: 20px;
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -417,6 +458,11 @@ a:hover {
   margin-top: 30px;
   background-size: cover;
   background-position: center;
+}
+
+.portfolio-item.demo {
+  height: 520px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 }
 
 .portfolio-item:hover {
@@ -467,7 +513,7 @@ a:hover {
   text-align: center;
   background-color: white;
   border: 1px solid rgba(0,0,0, 0.1);
-  margin-top: 10px;
+  margin-top: 25px;
 
 }
 
@@ -500,6 +546,7 @@ a:hover {
 ===================================================================*/
 
 .cta {
+  padding-bottom: 40px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -618,17 +665,39 @@ a:hover {
   position: relative;
 }
 
+#contact .section-header {
+  margin-bottom: 40px;
+}
+
+#contact iframe {
+  width: 100%;
+  border: 0;
+}
+
 .form-box {
   position: absolute;
   bottom: -280px;
   left: 10vw;
   z-index: 5;
   width: 80vw;
-  padding-bottom: 40px;
+  padding-top: 25px;
+  padding-bottom: 60px;
   margin-top: -80px;
   background-color: white;
   border-top: 4px solid #2ecc71;
   box-shadow: 0px 5px 40px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 980px) {
+  .form-box {
+    bottom: -580px;
+  }
+}
+
+@media(max-width: 580px) {
+  .form-box {
+    bottom: -700px;
+  }
 }
 
 .form-control {
@@ -648,6 +717,18 @@ a:hover {
 .footer {
   margin-top: 430px;
   background-color: black;
+}
+
+@media(max-width: 980px) {
+  .footer {
+    margin-top: 600px;
+  }
+}
+
+@media(max-width: 580px) {
+  .footer {
+    margin-top: 800px;
+  }
 }
 
 .footer .navbar-brand {
